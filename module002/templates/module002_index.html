@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href={{url_for('module002.module002_index')}}>Home</a></li>
+            {%if cursos %}
+                {%for curso in cursos %}
+
+                    <li><a href="/board/post?id={{curso.course_code}}">{{curso.course_name}}</a></li>
+
+                {% endfor %}
+            {% endif %}
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+

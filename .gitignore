@@ -1,0 +1,6 @@
+__pycache__
+*.swp
+*.sqlite
+configuration.json
+uploads/*
+venv
